@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Merge upstream
         run: |
-          git config --global user.name Ben Willmore'
+          git config --global user.name 'Ben Willmore'
           git config --global user.email 'ben@willmore.eu'
 
           # git checkout main
