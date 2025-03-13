@@ -51,7 +51,7 @@ jobs:
           sudo make install
       - name: Build
         run: |
-          cmake -H. -Bbuild-cmake -GNinja -DCMAKE_BUILD_TYPE=Release
+          cmake -H. -Bbuild-cmake -GNinja -DUSE_OPENGLES=1 -DBUILD_CROWD_CONTROL=0 -DCMAKE_BUILD_TYPE=Release
           cmake --build build-cmake -j
       - name: Create Package
         run: |
@@ -62,4 +62,4 @@ jobs:
         with:
           name: starship-linux-aarch64
           path: starship-release
-          retention-days: 1
+          retention-days: 7
